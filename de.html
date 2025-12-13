@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Form</title>
+    <link rel="stylesheet" href="de.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Account Registration</h2>
+        <form action="#" method="POST">
+
+            <div class="flex-group">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select a country</option>
+                    <option value="usa">United States</option>
+                    <option value="can">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                </select>
+            </div>
+
+            <div class="form-group radio-group">
+                <label>Preferred Contact</label>
+                <div class="radio-option">
+                    <input type="radio" id="email-pref" name="contact" value="email" checked>
+                    <label for="email-pref">Email</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="phone-pref" name="contact" value="phone">
+                    <label for="phone-pref">Phone</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit">Register Now</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
