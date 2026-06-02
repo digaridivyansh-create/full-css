@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to JavaScript Lab</title>
+</head>
+
+<body>
+
+<div class="container">
+     <h1 id="heading">Welcome to JavaScript lab</h1>
+     <input type="text" id="inputText" placeholder="Enter your heading name">
+
+     <br>
+                                                 
+     <button id="btnHeading">Change heading"</button>
+     <button id="btnBg">Change Background</button>
+     <button id="btnFont">Increase Font Size</button>
+
+     <br>
+
+     <button id="btnToggle">Show/Hide Paragraph</button>
+     <button id="btnReset">Reset</button>
+     <p id="para">
+        This is a sample paragraph. JavaScript events can dynamically change content.
+    </p>
+</div>
+
+<script>
+let fontSize = 16;
+let bgToggle = false;
+
+const heading = document.getElementById("heading");
+const input = document.getElementById("inputText");
+const para = document.getElementById("para");
+
+document.getElementById("btnHeading").addEventListener("click", function () {
+    if (input.value !== "") {
+        heading.innerText = input.value;
+    }
+});
+
+document.getElementById("btnBg").addEventListener("click", function () {
+    bgToggle = !bgToggle;
+    document.body.style.backgroundColor = bgToggle ? "#cce5ff" : "#e6e6e6";
+});
+
+document.getElementById("btnFont").addEventListener("click", function () {
+    fontSize += 2;
+    para.style.fontSize = fontSize + "px";
+});
+
+document.getElementById("btnToggle").addEventListener("click", function () {
+    para.style.display = (para.style.display === "none") ? "block" : "none";
+});
+
+document.getElementById("btnReset").addEventListener("click", function () {
+    heading.innerText = "Welcome to JavaScript Lab";
+    input.value = "";
+    document.body.style.backgroundColor = "#e6e6e6";
+    para.style.display = "block";
+    fontSize = 16;
+    para.style.fontSize = "16px";
+});
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#74ebd5,#acb6e5);
+}
+.container{
+    background:linear-gradient(135deg,#ffffff,#e3f2fd);
+    padding:20px;
+    width:380px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+h1{margin-bottom:10px;color:#333;}
+
+input{
+    width:100%;
+    padding:8px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+button{
+    width:48%;
+    padding:10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+     
+     
+     
+     
+     
+     
+    

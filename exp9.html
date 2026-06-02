@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive 4-Product Grid</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* Grid Container */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Product Card */
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      padding-bottom: 10px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px 0;
+      font-size: 18px;
+    }
+
+    .product-card p.price {
+      margin: 0 0 5px 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .product-card p.description {
+      margin: 0 10px 10px 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Media Queries */
+
+    /* Tablet: ≤1000px → 2 columns */
+    @media (max-width: 1000px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile: ≤650px → 1 column */
+    @media (max-width: 650px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Featured Products</h1>
+
+  <div class="container">
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuOn44OnYzcpMcd5eUSSz7fqugQDZp6IijGl2YoOI5ijqWvefeuvwDyOM&s" alt="Product 1">
+      <h3>Product 1</h3>
+      <p class="price">$35</p>
+      <p class="description">A high-quality product perfect for everyday use.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFOjlSa1FFXb3qutfCCAt_omuM13F81cSK-Sbhx-HytveGcwFUZcl5uJ8&s" alt="Product 2">
+      <h3>Product 2</h3>
+      <p class="price">$50</p>
+      <p class="description">Stylish and durable, ideal for casual wear or gifts.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTHS6wra_nIFEpUZ9FxBP_bPOIb3ZuDq4TUGw7G8Rzt-MngUGtO0I6sZo&salt" alt="Product 3">
+      <h3>Product 3</h3>
+      <p class="price">$850.00</p>
+      <p class="description">Premium quality with excellent performance and design.</p>
+    </div>
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB1apQ2SnXbh2AVM2qviTO7kdwFQRCwbW82N66khHIG0WHnX-ICFS-k0g&s" alt="Product 4">
+      <h3>Product 4</h3>
+      <p class="price">$75.00</p>
+      <p class="description">Best seller! Highly recommended by our customers.</p>
+    </div>
+  </div>
+
+</body>
+</html>

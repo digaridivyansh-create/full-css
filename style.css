@@ -1,8 +1,13 @@
-#hello{
-    font-weight: 200;
-    color: red;
+div{
+   color:blue;
+    height: 100px;
+    width: 100px;
+    margin: 50px;
+    padding: 35px;
+    display: inline-block;
+   
 }
-#dex{
-    font-weight: 900;
-    color: blue;
+
+#box{
+    visibility: hidden;
 }

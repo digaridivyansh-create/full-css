@@ -1,0 +1,189 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f3f3;
+    color: #111;
+    line-height: 1.5;
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #131921;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-main a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.nav-main a:hover {
+    color: #febd69;
+}
+
+/* --- Hero Section --- */
+.hero-section img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+/* --- Section Titles --- */
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    padding-top: 40px;
+}
+
+/* --- Grids --- */
+.categories-grid,
+.deals-grid,
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 40px;
+}
+
+/* --- Cards --- */
+.category-card,
+.deal-card,
+.testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.category-card img,
+.deal-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category-card span,
+.deal-card span {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.price {
+    color: #cc0c39;
+    font-size: 20px;
+}
+
+.category-card:hover,
+.deal-card:hover,
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+/* --- Testimonials --- */
+.testimonial-card {
+    padding: 30px;
+    font-style: italic;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card span {
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+/* --- Newsletter --- */
+.newsletter {
+    text-align: center;
+    background: #131921;
+    color: white;
+    padding: 60px 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background: #febd69;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.newsletter button:hover {
+    background: #f3a847;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #232f3e;
+    color: white;
+    margin-top: 40px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+    .categories-grid,
+    .deals-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .categories-grid,
+    .deals-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .nav-main {
+        margin-top: 15px;
+    }
+}
+
+
+

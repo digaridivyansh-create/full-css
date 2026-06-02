@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Salary Management System</title>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Employee Salary Management System</h1>
+
+<div class="input-row">
+<input type="text" id="name" placeholder="Employee Name">
+<input type="text" id="id" placeholder="Employee ID">
+<input type="number" id="salary" placeholder="Salary">
+</div>
+
+<div class="input-row">
+<input type="text" id="dept" placeholder="Department">
+</div>
+
+<div class="btn-row">
+<button onclick="addEmployee()">Add Employee</button>
+<button onclick="displayEmployees()">Display All</button>
+<button onclick="filterSalary()">Salary > 50000</button>
+<button onclick="totalSalary()">Total Salary</button>
+<button onclick="averageSalary()">Average Salary</button>
+<button onclick="countDepartment()">Count by Department</button>
+</div>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+let employees=[];
+
+function addEmployee(){
+let name=document.getElementById("name").value;
+let id=document.getElementById("id").value;
+let salary=parseFloat(document.getElementById("salary").value);
+let dept=document.getElementById("dept").value;
+
+let emp={name:name,id:id,salary:salary,department:dept};
+employees.push(emp);
+
+alert("Employee Added");
+}
+
+function displayEmployees(){
+let output="";
+for(let emp of employees){
+output+=emp.name+" | "+emp.id+" | "+emp.salary+" | "+emp.department+"<br>";
+}
+document.getElementById("result").innerHTML=output;
+}
+
+function filterSalary(){
+let filtered=employees.filter(emp=>emp.salary>50000);
+let output="";
+for(let emp of filtered){
+output+=emp.name+" - "+emp.salary+"<br>";
+}
+document.getElementById("result").innerHTML=output;
+}
+
+function totalSalary(){
+let total=0;
+for(let emp of employees){
+total+=emp.salary;
+}
+document.getElementById("result").innerHTML="Total Salary = "+total;
+}
+
+function averageSalary(){
+let total=0;
+for(let emp of employees){
+total+=emp.salary;
+}
+let avg=total/employees.length;
+document.getElementById("result").innerHTML="Average Salary = "+avg;
+}
+
+function countDepartment(){
+let dept=prompt("Enter department name");
+let count=0;
+for(let emp of employees){
+if(emp.department===dept){
+count++;
+}
+}
+document.getElementById("result").innerHTML="Employees in "+dept+" = "+count;
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#c2e9fb,#a1c4fd);
+}
+
+.container{
+width:600px;
+padding:25px;
+background:#fff;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+h1{margin-bottom:15px;}
+
+.input-row{
+display:flex;
+gap:8px;
+margin-bottom:10px;
+}
+
+input{
+flex:1;
+padding:8px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.btn-row{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+justify-content:center;
+}
+
+button{
+padding:8px 12px;
+border:none;
+border-radius:5px;
+background:#4caf50;
+color:#fff;
+cursor:pointer;
+}
+
+button:hover{background:#388e3c;}
+
+#result{
+margin-top:15px;
+padding:10px;
+background:#f9f9f9;
+border:1px solid #ddd;
+border-radius:5px;
+min-height:50px;
+}
+</style>
+
+</body>
+</html>

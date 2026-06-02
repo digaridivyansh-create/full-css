@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</title>
-    <link rel="stylesheet" href="css.css">
+    <title>Nexus Cart</title>
+
+    <link rel="stylesheet" href="ssc.css">
 </head>
 <body>
+    <div style="text-align:center; padding:15px; font-size:13px; color:#555;">
+        This website is a frontend UI demonstration project created for educational purposes only.
+        It does not support real purchases, payments, accounts, or transactions.
+    </div>
 
     <header>
         <div class="nav-border nav-logo">
@@ -104,7 +109,7 @@
             </div>
 
             <div class="card">
-                <h2>Appliances for your home | Up to 55% off</h2>
+                <a href="#" class="card-link">Explore all</a>
                 <div class="card-body-quad">
                     <div class="quad-item">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOhm3ADkDJFSl1FUN0xhKHMKg7RT1uqEfBiw&s" class="quad-img">
@@ -135,7 +140,7 @@
             </div>
 
             <div class="card">
-                <h2>Sign in for your best experience</h2>
+                <h2>Guest Sign in</h2>
                 <div style="flex-grow:1; display:flex; align-items:center; justify-content:center;">
                     <div style="text-align:center;">
                         <button style="background:#FFD814; border:none; padding:15px 80px; border-radius:8px; font-weight:700; cursor:pointer; box-shadow:0 2px 5px rgba(0,0,0,0.2); font-size:16px;">Sign in securely</button>
@@ -203,7 +208,9 @@
                 
                 <div class="product-item">
                     <div class="product-img-box">
-                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" class="product-img">
+                        <div class="scroll-container">
+                         <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500" class="product-img">
+                        </div>
                     </div>
                     <div>
                         <span class="badge">Up to 45% off</span>
@@ -279,10 +286,8 @@
             </div>
         </div>
 
-    </div>
+    </div> <!-- closing content-wrapper -->
 
-    <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</div>
-    
     <footer>
         <div class="footer-grid">
             <div class="col">
@@ -291,7 +296,6 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Press Releases</a></li>
-                    <li><a href="#">Amazon Science</a></li>
                 </ul>
             </div>
             <div class="col">
@@ -314,21 +318,12 @@
             <div class="col">
                 <h3>Let Us Help You</h3>
                 <ul>
-                    <li><a href="#">COVID-19 and Amazon</a></li>
                     <li><a href="#">Your Account</a></li>
                     <li><a href="#">Returns Centre</a></li>
                     <li><a href="#">100% Purchase Protection</a></li>
                 </ul>
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" class="footer-logo">
-            <div style="color:#CCC; font-size:12px; margin-top:10px;">
-                <p>Australia | Brazil | Canada | China | France | Germany | Italy | Japan | Mexico | Netherlands | Poland | Singapore | Spain | Turkey | UAE | United Kingdom | United States</p>
-            </div>
-        </div>
     </footer>
-
 </body>
 </html>
